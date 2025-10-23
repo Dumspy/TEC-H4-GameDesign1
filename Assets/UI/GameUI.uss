@@ -1,0 +1,21 @@
+:root {
+}
+
+.text {
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    -unity-text-align: upper-center;
+    color: rgb(255, 255, 255);
+    -unity-text-outline-width: 2px;
+    -unity-font-style: normal;
+    -unity-text-outline-color: rgb(0, 0, 0);
+}
+
+.score {
+    font-size: 40px;
+}
+
+.timer {
+    font-size: 70px;
+}

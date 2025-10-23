@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/MainMenuUI.uss?fileID=7433441132597879392&amp;guid=5e8df76143ca046178092ff5266d9e57&amp;type=3#MainMenuUI" />
+    <ui:VisualElement style="flex-grow: 1; align-items: center; -unity-text-align: upper-center; align-content: flex-start;">
+        <ui:Label text="Blabla Title" name="TitleLabel" class="text" style="margin-top: 15%;" />
+        <ui:Button text="Start" name="StartButton" class="button" />
+        <ui:Button text="Exit" name="ExitButton" class="button" />
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; align-items: auto;">
+        <ui:VisualElement name="LeaderboardBackground" class="leaderboardBackground" style="flex-grow: 1;">
+            <ui:Label text="Leaderboard" name="LeaderboardTitle" class="text" />
+            <ui:Label text="No entries yet." name="LeaderboardLabel" class="text leaderboardSmallText" style="white-space: nowrap; -unity-text-align: upper-center;">
+                <Bindings>
+                    <ui:DataBinding property="text" data-source-path="formattedLeaderboard" data-source-type="LeaderboardController, Assembly-CSharp" binding-mode="ToTarget" />
+                </Bindings>
+            </ui:Label>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
