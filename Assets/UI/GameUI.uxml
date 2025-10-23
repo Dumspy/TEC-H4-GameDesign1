@@ -12,7 +12,7 @@
             </Bindings>
         </ui:Label>
     </ui:VisualElement>
-    <ui:VisualElement name="EndUI" style="flex-grow: 1; background-color: rgba(96, 96, 96, 0.59); display: none;">
+    <ui:VisualElement name="EndUI" style="flex-grow: 1; background-color: rgba(96, 96, 96, 0.59); display: none; align-items: center; justify-content: flex-start; margin-top: 0%; margin-bottom: 0%; padding-top: 15%; padding-right: 15%; padding-bottom: 15%; padding-left: 15%;">
         <ui:Label text="Gameover" name="Title" class="text" style="font-size: 70px;" />
         <ui:Label text="Timespent: 00:00:00" name="EndTimerLabel" class="text" style="font-size: 70px;">
             <Bindings>
@@ -39,8 +39,8 @@
                 <ui:DataBinding property="text" data-source-path="FormattedFinalTime" data-source-type="EndScreenController, Assembly-CSharp" binding-mode="ToTarget" />
             </Bindings>
         </ui:Label>
-        <ui:TextField placeholder-text="Name" name="UsernameInput" />
-        <ui:Button text="Submit score" name="SubmitButton" />
-        <ui:Button text="Return to main menu" name="ReturnButton" />
+        <ui:TextField placeholder-text="Name" name="UsernameInput" class="button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px;" />
+        <ui:Button text="Submit score" name="SubmitButton" class="button" />
+        <ui:Button text="Return to main menu" name="ReturnButton" class="button" />
     </ui:VisualElement>
 </ui:UXML>
