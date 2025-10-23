@@ -32,7 +32,6 @@
 .leaderboardBackground {
     background-color: rgba(63, 63, 63, 0.39);
     width: auto;
-    height: 100px;
     margin-bottom: 3%;
     margin-left: 0%;
     margin-right: 3%;
@@ -49,4 +48,29 @@
     padding-right: 0;
     padding-bottom: 0;
     padding-left: 0;
+}
+
+.mainmenu-flex {
+    flex-grow: 1;
+    align-items: center;
+    -unity-text-align: upper-center;
+    align-content: flex-start;
+}
+
+.mainmenu-title {
+    margin-top: 15%;
+}
+
+.mainmenu-leaderboard-flex {
+    flex-grow: 1;
+    align-items: auto;
+}
+
+.leaderboard-title {
+    /* Inherit .text styles, can add more if needed */
+}
+
+.leaderboard-label {
+    white-space: nowrap;
+    -unity-text-align: upper-center;
 }
