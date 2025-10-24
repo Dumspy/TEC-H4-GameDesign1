@@ -11,7 +11,7 @@ public class LeaderboardController : MonoBehaviour {
     [UxmlAttribute, CreateProperty, HideInInspector]
     public string formattedLeaderboard = "";
     public static LeaderboardController Instance { get; private set; }
-    private string LeaderboardFile => Path.Combine(Application.persistentDataPath, "leaderboard.json");
+    private const string LeaderboardKey = "LeaderboardData";
     public LeaderboardData leaderboard = new();
     private void Awake()
     {
@@ -65,21 +65,21 @@ public class LeaderboardController : MonoBehaviour {
     private void SaveLeaderboard()
     {
         string json = JsonUtility.ToJson(leaderboard, true);
-        File.WriteAllText(LeaderboardFile, json);
+        PlayerPrefs.SetString(LeaderboardKey, json);
+        PlayerPrefs.Save();
     }
     private void LoadLeaderboard()
     {
-        if (File.Exists(LeaderboardFile))
+        if (PlayerPrefs.HasKey(LeaderboardKey))
         {
-            string json = File.ReadAllText(LeaderboardFile);
+            string json = PlayerPrefs.GetString(LeaderboardKey);
             leaderboard = JsonUtility.FromJson<LeaderboardData>(json);
-            UpdateFormattedLeaderboard();
         }
         else
         {
             leaderboard = new LeaderboardData();
-            UpdateFormattedLeaderboard();
         }
+        UpdateFormattedLeaderboard();
     }
     private void UpdateFormattedLeaderboard()
     {
